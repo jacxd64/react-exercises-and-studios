@@ -1,5 +1,11 @@
+import recipedata from "./recipe.json";
+import "./styling.css";
+
 function IngredientList() {
-   return;
+   const ListOfIngidiants = (props) => {
+    return props.map((ing) => <li key={props.index}>{ing}</li>)
+   };
+   return <ul>{ListOfIngidiants(recipedata[0].ingredients)}</ul>;
  }
  
  export default IngredientList;
